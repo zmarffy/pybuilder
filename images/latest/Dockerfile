@@ -17,7 +17,8 @@ RUN pip install \
     poetry-dynamic-versioning \
     poethepoet \
     pytest \
-    twine
+    twine \
+    semver
 
 ENTRYPOINT [ "sh", "/entrypoint.sh" ]
 CMD [ "bash" ]
