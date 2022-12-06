@@ -18,6 +18,7 @@ RUN pip install \
     poethepoet \
     pytest \
     twine \
+    toml \
     semver
 
 ENTRYPOINT [ "sh", "/entrypoint.sh" ]
