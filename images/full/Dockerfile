@@ -1,6 +1,6 @@
 ARG PYTHON_VERSION=latest
 
-FROM pybuilder:lite-${PYTHON_VERSION}
+FROM zmarffy/pybuilder:lite-${PYTHON_VERSION}
 
 ENV GH_TOKEN=
 
