@@ -1,4 +1,6 @@
-FROM python:latest
+ARG PYTHON_VERSION=latest
+
+FROM pybuilder:lite-${PYTHON_VERSION}
 
 ENV GH_TOKEN=
 
@@ -12,14 +14,10 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     gh \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pip install \
-    poetry \
-    poetry-dynamic-versioning \
-    poethepoet \
-    pytest \
-    twine \
-    toml \
-    semver
+RUN poetry self add \
+    "poetry-dynamic-versioning[plugin]" \
+    "poethepoet[poetry_plugin]"
 
 ENTRYPOINT [ "sh", "/entrypoint.sh" ]
+
 CMD [ "bash" ]

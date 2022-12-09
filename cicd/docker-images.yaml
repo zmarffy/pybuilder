@@ -1,0 +1,40 @@
+- FOLDER: lite
+  BUILD_ARGS:
+    PYTHON_VERSION: "3.9"
+  TAGS:
+    - lite-3.9
+
+- FOLDER: lite
+  BUILD_ARGS:
+    PYTHON_VERSION: "3.10"
+  TAGS:
+    - lite-3.10
+
+- FOLDER: lite
+  BUILD_ARGS:
+    PYTHON_VERSION: "3.11"
+  TAGS:
+    - lite-3.11
+    - lite
+
+- FOLDER: full
+  BUILD_ARGS:
+    PYTHON_VERSION: "3.9"
+  TAGS:
+    - full-3.9
+    - "3.9"
+
+- FOLDER: full
+  BUILD_ARGS:
+    PYTHON_VERSION: "3.10"
+  TAGS:
+    - "3.10"
+    - full-3.10
+
+- FOLDER: full
+  BUILD_ARGS:
+    PYTHON_VERSION: "3.11"
+  TAGS:
+    - full-3.11
+    - "3.11"
+    - latest
