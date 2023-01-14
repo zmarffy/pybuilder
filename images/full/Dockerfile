@@ -12,6 +12,7 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/g
 RUN apt-get update && apt-get install --no-install-recommends -y \
     software-properties-common \
     gh \
+    jq \
     && rm -rf /var/lib/apt/lists/*
 
 RUN poetry self add \
